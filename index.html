@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="/images/WhatsApp Image 2023-02-01 at 7.47.42 PM.png" >
+                <img src="/images/image2.png" >
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -40,20 +40,20 @@
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-                <div class="tab-contents active-tab">
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>UI/UX</span><br>Desigining Web/App interfaces</li>
                         <li><span>Web Development</span><br>Web app Development</li>
                         <li><span>Graphic Desigining</span><br>Desigining Logos and Social Media posts</li>
                     </ul>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents" id="experience">
                     <ul>
                         <li><span>2022 - Current</span><br>Creative Team at DBIT's student chapter of Computer Society of India</li>
                         <li><span>2022 - Current</span><br>Design Team at DBIT's Physics Club<br></li>
                     </ul>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2019</span><br>SSC at New English School, Kalwa, Thane</li>
                         <li><span>2021</span><br>HSC at Sheth NKTT College, Thane</li>
@@ -65,6 +65,32 @@
         </div>
     </div>
 </div>
+<!------------services-------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="service-list">
+            
+        </div>
+    </div>
+</div>
     
+<script>
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
 </body>
 </html>
